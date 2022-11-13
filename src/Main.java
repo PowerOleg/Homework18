@@ -1,10 +1,6 @@
-//        подумай может гдето запихать дженерики
-//        посмотри как у ков
-//из метода вынести создания объектов new
 import java.util.*;
 
 public class Main {
-
     public static List<Person> generateClients() {
         List<Person> queue = new LinkedList<>();
         queue.add(new Person("Rabbit", "Hare", 0));
@@ -15,6 +11,7 @@ public class Main {
         queue.add(new Person("Alex", "Bui", 10));
         return queue;
     }
+
     public static void faceControl(Queue<Person> queue) {
         for (Iterator<Person> iterator = queue.iterator(); iterator.hasNext(); ) {
             Person p = iterator.next();
@@ -29,6 +26,7 @@ public class Main {
             }
         }
     }
+
     public static void main(String[] args) {
         Queue<Person> queue1 = new ArrayDeque<>(generateClients());
         while (!queue1.isEmpty()) {
